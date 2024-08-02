@@ -19,7 +19,6 @@ const tareas = [
 const tareasFinalizadas = [];
 
 function agregarTareas(tareas) {
-
   const container = document.getElementById("container");
 
   const card = document.createElement("div");
@@ -45,7 +44,6 @@ function agregarTareas(tareas) {
       if (index > -1) {
         tareasFinalizadas.splice(index, 1);
       }
-
     } else {
       tareas.finalizada = true;
       boton.innerText = "Finalizada";
@@ -54,7 +52,7 @@ function agregarTareas(tareas) {
       if (!tareasFinalizadas.includes(tareas)) {
         tareasFinalizadas.push(tareas);
       }
-
+      console.log(tareasFinalizadas);
     }
 
     boton.innerText = tareas.finalizada ? "Finalizada" : "Finalizar";
