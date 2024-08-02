@@ -52,11 +52,12 @@ function agregarTareas(tareas) {
       if (!tareasFinalizadas.includes(tareas)) {
         tareasFinalizadas.push(tareas);
       }
-      console.log(tareasFinalizadas);
     }
 
     boton.innerText = tareas.finalizada ? "Finalizada" : "Finalizar";
     boton.style.backgroundColor = tareas.finalizada ? "green" : "gray";
+
+    console.log(tareasFinalizadas);
   };
 
   card.append(titulo);
